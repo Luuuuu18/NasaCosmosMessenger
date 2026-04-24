@@ -1,9 +1,7 @@
 package com.example.nasacosmosmessenger.Screen
 
 import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import android.util.TypedValue
-import android.view.View
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.*
 import androidx.compose.foundation.rememberScrollState
@@ -29,7 +27,6 @@ import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import coil.compose.AsyncImage
 import coil.imageLoader
 import coil.request.ImageRequest
-import coil.request.ImageRequest.*
 import com.example.nasacosmosmessenger.component.FavoriteCard
 import com.example.nasacosmosmessenger.component.ShareCard
 import com.example.nasacosmosmessenger.data.local.AppDatabaseProvider
@@ -110,7 +107,7 @@ fun FavoritesScreen() {
                 val widthPx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 300f, displayMetrics).toInt()
                 val heightPx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 500f, displayMetrics).toInt()
 
-                // 🌟 關鍵神技開始 🌟
+
                 val params = android.widget.FrameLayout.LayoutParams(widthPx, heightPx)
 
                 // 把它推到螢幕右邊 10000 像素的地方（使用者絕對看不到）

@@ -34,10 +34,9 @@ fun ChatBubble(
         if (message.isUser) Arrangement.End else Arrangement.Start
     ) {
 
-        // 🤖 機器人頭像（只在 bot 顯示）
         if (!message.isUser) {
             Image(
-                painter = painterResource(id = R.drawable.ic_bot), // 放你的圖片
+                painter = painterResource(id = R.drawable.ic_bot),
                 contentDescription = null,
                 modifier = Modifier
                     .size(36.dp)
@@ -63,7 +62,7 @@ fun ChatBubble(
                 .widthIn(max = 280.dp)
         ) {
 
-            // 🌌 圖片（只有 bot 顯示）
+
             if (!message.isUser && message.imageUrl != null) {
                 AsyncImage(
                     model = message.imageUrl,
@@ -76,7 +75,7 @@ fun ChatBubble(
                 )
             }
 
-            // 📝 文字
+
             message.content?.let {
                 Text(
                     text = it,
@@ -84,7 +83,7 @@ fun ChatBubble(
                 )
             }
 
-            // 📅 日期
+
             message.date?.let {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(

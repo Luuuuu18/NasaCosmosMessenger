@@ -17,7 +17,7 @@ import com.example.nasacosmosmessenger.data.local.FavoriteEntity
 @Composable
 fun ShareCard(
     item: FavoriteEntity,
-    preloadedImage: ImageBitmap? = null // 🔥 新增這個參數
+    preloadedImage: ImageBitmap? = null
 ) {
     Column(
         modifier = Modifier
