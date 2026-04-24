@@ -43,7 +43,6 @@ import kotlinx.coroutines.launch
 fun FavoritesScreen() {
 
     val context = LocalContext.current
-    val parentComposition = rememberCompositionContext()
     val currentView = LocalView.current
 
     // 🔥 1. 新增 CoroutineScope，用來處理非同步的等待
